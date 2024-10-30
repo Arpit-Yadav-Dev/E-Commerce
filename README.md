@@ -2,7 +2,7 @@
 
 A responsive E-Commerce application that provides product listings, shopping cart functionality. Built using **React.js**, **Redux**, and **Node.js** for data management.
 
-**Live Demo**: [E-Commerce App](https://e-commerce-cb4cqjyjf-arpit-yadavs-projects-a2af005e.vercel.app/)
+**Live Demo**: [E-Commerce App](https://e-commerce-rho-sepia.vercel.app)
 
 ## Features
 
@@ -23,7 +23,7 @@ A responsive E-Commerce application that provides product listings, shopping car
 
    ```bash
    git clone https://github.com/Arpit-Yadav-Dev/E-Commerce.git
-      ```
+   ```
 
 2. Navigate into the project directory
 
