@@ -1,0 +1,135 @@
+.container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "sidebar"
+    "productList"
+    "footer";
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.header {
+  display: flex;
+  height: 30px;
+  justify-content: space-between;
+  /* align-items: center; */
+  grid-area: header;
+  background-color: black;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.filter {
+  display: flex;
+  width: 85%;
+  justify-content: space-around;
+  gap: 5px;
+}
+
+.cart {
+  width: 30%;
+  display: flex;
+  justify-content: end;
+  gap: 5px;
+  /* align-items: center; */
+}
+
+.sidebar {
+  grid-area: sidebar;
+  padding: 16px;
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease;
+}
+
+.productList {
+  grid-area: productList;
+  display: grid;
+  /* flex-wrap: wrap; */
+  gap: 16px;
+  /* padding: 16px; */
+  height: 78vh;
+  overflow-y: scroll;
+}
+
+.footer {
+  grid-area: footer;
+  max-width: 100%;
+  overflow-x: scroll;
+  display: flex;
+  justify-content: center;
+  /* background-color: #333; */
+  color: #fff;
+  /* padding: 10px; */
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .container {
+    grid-template-areas:
+      "header header header"
+      "sidebar productList productList"
+      "footer footer footer";
+    grid-template-columns: 250px 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: 200px 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background-color: #f9f9f9;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transform: translateX(-100%); /* Off-screen */
+    z-index: 10;
+  }
+}
+
+.sidebarOpen {
+  display: block;
+  transform: translateX(0); /* Slide in from left */
+}
+
+/*toggle button only on mobile */
+.sidebarToggle {
+  display: inline-block;
+}
+
+.brand{
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    display: block;
+  }
+
+  .sidebarToggle {
+    display: none;
+  }
+  .brand{
+    display: block;
+  }
+
+ 
+.filter {
+  /* display: flex; */
+  width: 70;
+  justify-content: space-between;
+  /* gap: 5px; */
+}
+}
+
+
